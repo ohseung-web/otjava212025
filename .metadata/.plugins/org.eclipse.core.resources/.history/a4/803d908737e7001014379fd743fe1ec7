@@ -1,0 +1,32 @@
+package example;
+
+import java.util.Scanner;
+
+public class ArrayEx06 {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		int[] hakbuns = {1001, 1002, 1003, 1004, 1005};
+		int[] scores = { 87, 11, 45, 98, 23};
+		
+//		문제) 1등 학생의 학번과 성적 출력
+//		정답) 1004번(98점)
+        
+		int maxscore = 0;
+		int check = 0;
+		
+		for(int i=0; i<scores.length; i++) {
+			for(int j=i+1; j<scores.length; j++) {
+				if(scores[i]>scores[j]) {
+					maxscore = i;
+					check = i;
+				}
+			}
+		}
+		
+		
+		scan.close();
+	}
+
+}

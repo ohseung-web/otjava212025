@@ -1,0 +1,24 @@
+package multiexample;
+
+import java.util.Arrays;
+
+public class MultiArrEx03 {
+
+	public static void main(String[] args) {
+		//배열 선언 및 초기화
+		int[][] score= {
+				{95,86},
+				{83,92,96},
+				{78,83,93,87,88}
+		};
+		//배열 접근하기
+		//System.out.println(score[0][1]);
+		
+		for(int i=0; i<score.length; i++) {
+        	for(int j=0; j<score[i].length; j++) {
+        		System.out.print(score[i][j]+" ");
+        	}
+        	System.out.println();
+        }
+	}
+}

@@ -1,0 +1,91 @@
+package multiexample;
+
+import java.util.Scanner;
+
+public class ShoppingMall {
+
+	public static void main(String[] args) {
+		
+//		<문제> 쇼핑몰 [장바구니]
+//				1. 로그인 후 쇼핑 메뉴를 선택하면, 다음과 같이 상품목록을 보여준다.
+//				    1) 사과
+//				    2) 바나나
+//				    3) 딸기
+//				2. 번호를 선택해 상품을 장바구니에 담을 수 있다.
+//				3. 로그인 회원의 인덱스 번호는 각 행의 첫번째 열에 저장한다.
+//				4. 해당 회원이 구매한 상품의 인덱스 번호는 각 행의 두번째 열에 저장한다.
+//				5. [전체출력]은 로그아웃 상태에서만 출력되도록 작성한다.
+//
+//				    String[] ids = {"qwer", "javaking", "abcd"};
+//				    String[] pws = {"1111", "2222", "3333"};
+//				    String[] items = {"사과", "바나나", "딸기"};
+//				   int MAX_SIZE = 100;
+//				   int[][] jang = new int[MAX_SIZE][2];
+//
+//				    예)
+//				{
+//						{0, 0},				qwer회원 			> 사과구매
+//						{1, 1},				javaking회원 		> 바나나구매
+//				 		{2, 0},				abcd회원			> 사과구매
+//						{0, 2},				qwer회원			> 딸기구매
+//						...
+//				}
+		
+			Scanner scan = new Scanner(System.in);
+			String[] ids = {"qwer", "javaking", "abcd"};
+		    String[] pws = {"1111", "2222", "3333"};
+		    String[] items = {"사과", "바나나", "딸기"};
+		    int MAX_SIZE = 100;
+		    int[][] jang = new int[MAX_SIZE][2];
+		    
+		    boolean run = true;
+		    int log = -1; //로그아웃 체크키
+
+		    while(run) {
+		    	System.out.println("-----------");
+		    	System.out.print("상태 :");
+		    	if(log == -1) {
+		    		System.out.println("로그아웃");
+		    	}else {
+		    		System.out.println(ids[log]);
+		    	}
+		    	System.out.println("-----------");
+		    	System.out.println("[GREEN MART]");
+		    	System.out.printf("[1]로그인%n[2]로그아웃%n[3]쇼핑%n[4]장바구니%n[0]종료%n");
+		    	System.out.print("메뉴 선택 : ");
+		    	int sel = scan.nextInt();
+		    	
+		    	if(sel == 1) {
+		    		System.out.print("ID입력 : ");
+		    		String myId = scan.next();
+		    		System.out.print("PW입력 : ");
+		    		String myPw = scan.next();
+		    		for(int i=0; i<ids.length; i++) {
+		    			if(ids[i].equals(myId) && pws[i].equals(myPw)) {
+		    				log = i;
+		    			}
+		    		}
+		    		if(log != -1) {
+		    			System.out.println(ids[log]+"님, 환영합니다.");
+		    		}else {
+	    				System.out.println("아이디와 비밀번호를 확인해주세요.");
+	    			}
+		    		
+		    	}else if(sel == 2) {
+		    		
+		    	}else if(sel == 3) {
+		    		
+		    	}else if(sel == 4) {
+		    		
+		    	}else {
+		    		run = false;
+		    		System.out.println("프로그램 종료");
+		    	}
+		    	
+		    }
+		    
+		    scan.close();
+
+	}
+
+}

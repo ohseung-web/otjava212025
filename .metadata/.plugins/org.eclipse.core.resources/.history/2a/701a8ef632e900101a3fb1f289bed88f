@@ -1,0 +1,67 @@
+package multiexample;
+
+import java.util.Scanner;
+
+public class MultiArrayEx03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		
+		int[][] arr = new int[3][3];
+		int cnt = 1; // 누적
+		int tot = 0; // 총개
+	    for(int i=0; i<arr.length; i++) {
+	    	for(int j=0; j<arr[i].length; j++) {
+	    		arr[i][j] = cnt*10;
+	    		cnt ++;
+	    		System.out.print(arr[i][j]+" ");
+	    		tot += arr[i][j];
+	    	}
+	    	System.out.println("");
+	    }
+	    System.out.println("------------------");
+	    
+	    //인덱스 2개를 입력받아 값 출력
+		// 예 1) 인덱스1 입력 : 1	인덱스2 입력 : 2
+        //       값 출력 : 60 
+	    System.out.print("인엑스1 :");
+	    int index01 = scan.nextInt();
+	    System.out.print("인덱스1 :");
+	    int index02 = scan.nextInt();
+	    System.out.println("값 :"+arr[index01][index02]);
+	    
+	    //값 2개를 입력받아 값 교체
+	    System.out.println("---------------");
+	    System.out.print("값1 :");
+	    int num01 = scan.nextInt();
+	    System.out.print("값2 :");
+	    int num02 = scan.nextInt();
+	    int temp = 0;
+	    int num01ind01=0, num01ind02=0, num02ind01=0, num02ind02=0;
+	    
+	    for(int i=0; i<arr.length; i++) {
+	    	for(int j=0; j<arr[i].length; j++) {
+	    		if(arr[i][j] == num01) {
+	    			num01ind01 = i;
+	    			num01ind02 = j;
+	    		}
+	    		if(arr[i][j] == num02) {
+	    			num02ind01 = i;
+	    			num02ind02 = j;
+	    		}
+	    	}
+	    }
+	    
+	    temp = arr[num01ind01][num01ind02];
+	    arr[num01ind01][num01ind02] = arr[num02ind01][num02ind02];
+	    arr[num02ind01][num02ind02] = temp;
+	    // 2개 값 교체 후 출력
+	    for(int i=0; i<arr.length; i++) {
+	    	for(int j=0; j<arr[i].length; j++) {
+	    		System.out.print(arr[i][j]+" ");
+	    	}
+	    	System.out.println();
+	    }
+	}
+}

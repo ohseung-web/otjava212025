@@ -1,0 +1,29 @@
+package example;
+
+import java.util.Scanner;
+
+public class ArrayEx01 {
+
+	public static void main(String[] args) {
+        
+		Scanner scan = new Scanner(System.in);
+
+		String[] student = new String[]{"홍길동","개나리","진달래","김백합","최동훈"};
+		int[] score= new int[5];
+		
+		int scoreTotal = 0;
+		double scoreAvg = 0;
+		
+		for(int i=0; i<student.length; i++) {
+			System.out.print(student[i]+"의 점수를 입력하세요 :");
+			score[i] = scan.nextInt();
+		}
+		for(int i=0; i<student.length; i++) {
+			System.out.print(student[i]+"의 점수:"+score[i]);
+			scoreTotal += score[i];
+		}
+		scoreAvg = scoreTotal / student.length;
+		System.out.printf("평균 : %.1f",scoreAvg);
+	}
+
+}

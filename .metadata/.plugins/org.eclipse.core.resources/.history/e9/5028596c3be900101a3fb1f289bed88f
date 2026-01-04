@@ -1,0 +1,85 @@
+package multiexample;
+
+import java.util.Scanner;
+
+public class MultiArrayEx04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		
+		        int[][] apt = {
+					{101, 102, 103},	
+					{201, 202, 203},	
+					{301, 302, 303}	
+		        };
+		
+				int[][] pay = {
+					{1000, 2100, 1300},	
+					{4100, 2000, 1000},	
+					{3000, 1600, 800}
+				};
+
+//			문제) 각 층별 관리비 합 출력
+//			정답) 4400, 7100, 5400
+				int[] rowTot = new int[3];
+				for(int i=0; i<apt.length; i++) {
+					for(int j=0; j<apt[i].length; j++) {
+						rowTot[i] += pay[i][j];
+					}
+				}
+				//출력
+				for(int i=0; i<pay.length; i++) {
+					System.out.println("층별 관리비 합계 :"+rowTot[i]);
+				}
+				
+//			문제 ) 호를 입력하면 관리비 출력
+//			예 ) 입력 : 202	관리비 출력 : 2000
+				System.out.print("호수를 입력:");
+				int hosu = scan.nextInt();
+				int hosurIndex=0;
+				int hosucIndex=0;
+				for(int i=0; i<apt.length; i++) {
+					for(int j=0; j<apt[i].length; j++) {
+						if(apt[i][j]==hosu) {
+							hosurIndex = i;
+							hosucIndex = j;
+						}
+					}
+				}
+				System.out.printf("입력한 호수:%d, %d호 관리비:%d%n",hosu,hosu,pay[hosurIndex][hosucIndex]);
+
+//			문제 ) 관리비가 가장 많이 나온 집, 적게 나온 집 출력
+//			정답 ) 가장 많이 나온 집(201), 가장 적게 나온 집(303)
+				   
+				int max=0;
+				int min=0;
+				int maxrIndex=0;
+				int maxcIndex = 0;
+				int minrIndex = 0;
+				int mincIndex = 0;
+				
+				for(int i=0; i<apt.length; i++) {
+					for(int j=0; j<apt[i].length; j++) {
+						if( pay[i][j] > max) {
+							max = pay[i][j];
+							maxrIndex = i;
+							maxcIndex = j;
+						}
+						if( max > pay[i][j]) {
+							min = pay[i][j];
+							minrIndex = i;
+							mincIndex = j;
+						}
+					}
+				}
+				System.out.printf("관리비 제일 많이 나온 호수%d 이다.%n",apt[maxrIndex][maxcIndex]);
+				System.out.printf("관리비 제일 적게 나온 호수%d 이다.",apt[minrIndex][mincIndex]);
+	
+				
+				
+
+        
+        scan.close();
+	}
+}

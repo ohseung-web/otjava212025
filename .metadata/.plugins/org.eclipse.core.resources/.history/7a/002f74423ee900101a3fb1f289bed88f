@@ -1,0 +1,47 @@
+package multiexample;
+
+import java.util.Scanner;
+
+public class String_example01 {
+
+	public static void main(String[] args) {
+		// String 객체 배열
+		Scanner scan = new Scanner(System.in);
+		
+		String a = new String("hongpossible");        
+	    String b = new String("hongpossible");
+	     
+	    // a와 b의 물리적 주소 출력
+	    System.out.println(System.identityHashCode(a));
+	    System.out.println(System.identityHashCode(b));
+	    
+	    if(a==b) {
+	        System.out.println("a==b");
+	    }
+	    if(a.equals(b)){
+	        System.out.println("a.equals(b) // true");
+	    }
+
+		
+		
+		
+	
+		String name = "홍길동";
+		System.out.print("이름을 입력하세요:");
+		String myName = scan.next();
+		System.out.println(myName);
+		
+		if(name == myName) {
+			System.out.println("==연산자 : 일치");
+		}else {
+			System.out.println("==연산자 : 불일치");
+		}
+		if(name.equals(myName)) {
+			System.out.println("equals() : 일치");
+		}else {
+			System.out.println("equals() : 불일치");
+		}
+		
+	}
+
+}

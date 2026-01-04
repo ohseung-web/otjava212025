@@ -1,0 +1,32 @@
+package multiexample;
+
+import java.util.Scanner;
+
+public class MultiArrayEx04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		
+		        int[][] apt = {
+					{101, 102, 103},	
+					{201, 202, 203},	
+					{301, 302, 303}	
+		        };
+		
+				int[][] pay = {
+					{1000, 2100, 1300},	
+					{4100, 2000, 1000},	
+					{3000, 1600, 800}
+				};
+
+//			문제) 각 층별 관리비 합 출력
+//			정답) 4400, 7100, 5400
+
+//			문제 ) 호를 입력하면 관리비 출력
+//			예 ) 입력 : 202	관리비 출력 : 2000
+
+        
+        scan.close();
+	}
+}

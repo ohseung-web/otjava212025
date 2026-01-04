@@ -1,0 +1,51 @@
+package multiexample;
+
+import java.util.Arrays;
+
+public class MultiArrayEx01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[][] arr = new int[3][3];
+		int cnt = 1; // 누적
+		int tot = 0; // 총개
+	    for(int i=0; i<arr.length; i++) {
+	    	for(int j=0; j<arr[i].length; j++) {
+	    		arr[i][j] = cnt*10;
+	    		cnt ++;
+	    		System.out.print(arr[i][j]+" ");
+	    		tot += arr[i][j];
+	    	}
+	    	System.out.println("");
+	    }
+	    System.out.println("------------------");
+	    // 문제 1) 전체 합 출력
+        // 정답 1) 450
+	    int sum = 0;
+	    for(int i=0; i<arr.length; i++) {
+	    	for(int j=0; j<arr[i].length; j++) {
+	    		sum += arr[i][j];
+	    	}
+	    }
+	    System.out.println("총계 :"+sum);
+	    
+	    System.out.println("--------------");
+	    
+	    //문제 2) 4의 배수와, 개수를 출력
+	    //정답 2) 20 40 60 80
+	    int mulitpleTot = 0;
+	    int multipleCnt = 0;
+	    for(int i=0; i<arr.length; i++) {
+	    	for(int j=0; j<arr[i].length; j++) {
+	    		 if(arr[i][j] % 4 == 0) {
+	    			 System.out.println(arr[i][j]+" ");
+	    			 multipleCnt ++;
+	    			 mulitpleTot += arr[i][j];
+	    		 }
+	    	}
+	    	System.out.println();
+	    	
+	    }
+
+	}
+}

@@ -1,0 +1,22 @@
+package example;
+
+import java.util.Arrays;
+
+public class ArrayTest {
+
+	public static void main(String[] args) {
+		int[] arr1 = {1,2,3,4,5};
+		int[] arr2= null;
+		int[] arr3 = null;
+		//배열의 길이
+		System.out.println("배열길이 :"+arr1.length);
+		
+		//배열의 요소 출력
+		System.out.println("배열의 요소 :"+arr1.toString());
+		
+		//배열의 용소 복사
+		arr3 = Arrays.copyOf(arr1, arr1.length);
+		System.out.println("arr3 :"+arr3.toString());
+ 	}
+
+}
