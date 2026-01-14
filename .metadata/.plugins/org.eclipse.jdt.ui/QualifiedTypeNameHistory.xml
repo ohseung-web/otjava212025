@@ -12,9 +12,22 @@
     <fullyQualifiedTypeName name="staticExample.StaticEx01"/>
     <fullyQualifiedTypeName name="privateExample.PrivateEx01"/>
     <fullyQualifiedTypeName name="bookShop.BookDTO"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="bookShop.BookArrayList"/>
     <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="interfaceEx.CompleteCalc"/>
+    <fullyQualifiedTypeName name="interfaceEx.Calculator"/>
+    <fullyQualifiedTypeName name="java.lang.StringTemplate"/>
+    <fullyQualifiedTypeName name="scheduer.Scheduer"/>
+    <fullyQualifiedTypeName name="interfaceEx02.Customer"/>
+    <fullyQualifiedTypeName name="interfaceEx02.Sell"/>
+    <fullyQualifiedTypeName name="interfaceEx03.MyInterface"/>
+    <fullyQualifiedTypeName name="interfaceEx03.MyClass"/>
+    <fullyQualifiedTypeName name="interfaceEx03.X"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="interfaceExample01.Buyable"/>
+    <fullyQualifiedTypeName name="interfaceExample02.Animal"/>
+    <fullyQualifiedTypeName name="interfaceExample03.Shape"/>
 </qualifiedTypeNameHistroy>
