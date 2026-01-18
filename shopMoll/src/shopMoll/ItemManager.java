@@ -20,6 +20,11 @@ public class ItemManager {
 	public ItemManager() {
 		info();
 	}
+	
+	// itemList에 아이템 추가 메소드 ---------------------
+	private void addItem(String name, int price, String category) {
+	    itemList.add(new Item(name, price, category));
+	}
 
 	// 카테고리 추가 및 item 추가 메서드 -------------------------------------------------------
 	public void info() {
@@ -27,22 +32,38 @@ public class ItemManager {
 		category.add("생선"); // index 1번째
 		category.add("육류"); // index 2번째
 		category.add("음료수"); // index 3번째
-		Item temp = new Item("새우깡", 1000, category.get(0)); // Item 인스턴스 함
-		itemList.add(temp);
-		temp = new Item("고등어", 2000, category.get(1)); 
-		itemList.add(temp);
-		temp = new Item("칸쵸", 3600, category.get(0)); 
-		itemList.add(temp);
-		temp = new Item("소고기", 6500, category.get(2)); 
-		itemList.add(temp);
-		temp = new Item("돼지고기", 5500, category.get(2)); 
-		itemList.add(temp);
-		temp = new Item("콜라", 1000, category.get(3)); 
-		itemList.add(temp);
-		temp = new Item("사이다", 1500, category.get(3)); 
-		itemList.add(temp);
-		temp = new Item("새우", 1800, category.get(1)); 
-		itemList.add(temp);
+		
+		addItem("새우깡", 1000, category.get(0));
+		addItem("고등어", 2000, category.get(1));
+		addItem("칸쵸", 3600, category.get(0));
+		addItem("소고기", 6500, category.get(2));
+		addItem("돼지고기", 5500, category.get(2));
+		addItem("콜라", 1000, category.get(3));
+		addItem("사이다", 1500, category.get(3));
+		addItem("새우", 1800, category.get(1));
+		
+		
+//		Item temp = new Item("새우깡", 1000, category.get(0)); // Item 인스턴스 함
+//		itemList.add(temp);
+//		temp = new Item("고등어", 2000, category.get(1)); 
+//		itemList.add(temp);
+//		temp = new Item("칸쵸", 3600, category.get(0)); 
+//		itemList.add(temp);
+//		temp = new Item("소고기", 6500, category.get(2)); 
+//		itemList.add(temp);
+//		temp = new Item("돼지고기", 5500, category.get(2)); 
+//		itemList.add(temp);
+//		temp = new Item("콜라", 1000, category.get(3)); 
+//		itemList.add(temp);
+//		temp = new Item("사이다", 1500, category.get(3)); 
+//		itemList.add(temp);
+//		temp = new Item("새우", 1800, category.get(1)); 
+//		itemList.add(temp);
+	}
+
+	private void addItem(Item item) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	// 카테고리 출력 메서드 ---------------------------------------------------------------------------
