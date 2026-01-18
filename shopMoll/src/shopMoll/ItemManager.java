@@ -102,7 +102,6 @@ public class ItemManager {
 		}
 	}
 
-
 	// 장바구니 delete ---------------------------------------------------------------------------
 	public void cartClear() {
 		int jangsize = jangList.size();
@@ -110,19 +109,16 @@ public class ItemManager {
 			jangList.remove(0);
 		}
 	}
-
 	// item 추가  ---------------------------------------------------------------------------
 	public void addItem(String addname, int addprice, int addcategory) {
 		Item temp = new Item(addname, addprice, category.get(addcategory)); 
 		itemList.add(temp);
 	}
 
-
 	// item 삭제  ---------------------------------------------------------------------------
 	public void deleteItem(int deleteindex) {
 			itemList.remove(deleteindex);
 	}	
-
 	// item 수정  ---------------------------------------------------------------------------
 	public void updateItem(int indexNUM, String updatename, int updateprice) {
 		for(int i =0; i< itemList.size(); i++) {
@@ -131,4 +127,8 @@ public class ItemManager {
 		}
 
 	}
+	
+	
+	
+	
 }
